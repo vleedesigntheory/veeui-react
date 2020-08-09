@@ -1,0 +1,17 @@
+{
+  "name": "veeui-react",
+  "version": "0.0.1",
+  "private": false,
+  "main": "index.js",
+  "description": "Vee UI Library based on React Framework",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/veeuidesign/veeui-react.git"
+  },
+  "keywords": ["vee","ui"],
+  "author": "veeui",
+  "license": "ISC",
+  "scripts": {
+    "serve": "vue-cli-service serve"
+  }
+}
