@@ -1,6 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from "styled-components";
+import { color } from "../shared/style.js";
 import './button.css';
+
+const Mybutton = styled.button({
+  color: '#fff',
+  backgroundColor: color.$primary
+});
 
 /**
  * Primary UI component for user interaction
@@ -8,14 +15,14 @@ import './button.css';
 export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
-    <button
+    <Mybutton
       type="button"
       className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
       style={backgroundColor && { backgroundColor }}
       {...props}
     >
       {label}
-    </button>
+    </Mybutton>
   );
 };
 
