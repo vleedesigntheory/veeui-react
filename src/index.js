@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import '@/styles/_var.scss';
+
+import Button from '@/packages/Button/button';
 
 const App = () => {
     return (
-        <div>
-            这是一个React App
-        </div>
+        <Button></Button>
     );
 };
 

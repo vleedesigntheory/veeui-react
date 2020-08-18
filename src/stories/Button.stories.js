@@ -1,24 +1,9 @@
 import React from 'react';
+import { action } from "@storybook/addon-actions";
 import PropTypes from 'prop-types';
 import styled from "styled-components";
-import { color } from "../../styles/style";
-
-const Mybutton = styled.button({
-  color: '#fff',
-  backgroundColor: color.$primary
-});
-
-export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
-  return (
-    <Mybutton
-      type="button"
-      style={backgroundColor && { backgroundColor }}
-      {...props}
-    >
-      {label}
-    </Mybutton>
-  );
-};
+import { color } from "./style";
+import Button from '../packages/Button/button';
 
 Button.propTypes = {
   primary: PropTypes.bool,
@@ -34,3 +19,21 @@ Button.defaultProps = {
   size: 'medium',
   onClick: undefined,
 };
+
+export default {
+  title: 'Button',
+  component: Button
+};
+
+const Template = (args) => <Button {...args} />;
+
+export const Primary = Template.bind({});
+Primary.args = {
+  primary: true,
+  label: 'Button',
+};
+
+
+
+
+
