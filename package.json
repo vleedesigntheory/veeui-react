@@ -1,7 +1,19 @@
 {
   "name": "veeui-react",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "./dist/veeui-vue.umd.min.js",
+  "description": "Vee UI Library based on React Framework",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/veeuidesign/veeui-react.git"
+  },
+  "keywords": [
+    "react",
+    "ui"
+  ],
+  "author": "veeui",
+  "license": "ISC",
   "dependencies": {
     "@babel/core": "7.9.0",
     "@svgr/webpack": "4.3.3",
@@ -68,7 +80,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "lib": "node scripts/lib.js"
   },
   "eslintConfig": {
     "extends": "react-app"

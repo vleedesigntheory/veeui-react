@@ -1,0 +1,75 @@
+@import '@/styles/_var.scss';
+
+$height: 30px;
+$border-radius: 4px;
+
+.vee-app {
+  padding: 10px;
+
+  .vee-break {
+    display:block;
+    margin: 10px;
+  }
+
+  .vee-note {
+    font-size: 12px;
+    color: #999;
+  }
+
+  ul>li {
+    padding: 5px;
+  }
+
+  .vee-col {
+    &-dark,
+    &-medium,
+    &-light {
+      height: $height;
+      border-radius: $border-radius;
+    }
+    
+
+    &-dark {
+      background: #333;
+    }
+
+    &-medium {
+      background: #999;
+    }
+
+    &-light {
+      background: #ccc;
+    }
+  }
+
+  .vee-container {
+    &-dark,
+    &-medium,
+    &-light {
+      color: #fff;
+      text-align: center;
+    }
+    
+
+    &-dark {
+      background: #222;
+      line-height: 60px;
+    }
+
+    &-medium {
+      background: #666;
+      line-height: 160px;
+    }
+
+    &-light {
+      background: #aaa;
+      line-height: 200px;
+    }
+  }
+
+  .vee-infinite-box {
+    width: 300px;
+    height: 300px;
+    border: 1px solid $primary;
+  }
+}

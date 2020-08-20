@@ -1,12 +1,14 @@
 import React from 'react';
 import './button.scss';
 
-const Button = () => {
+const VeeButton = (props) => {
+  console.log(props);
+  const { children, type } = props;
   return (
-    <div className="vee-button">
-      <button>111</button>
-    </div>
+    <button className={`vee-button vee-button-${type}`}>
+      {children}
+    </button>
   );
 }
 
-export default Button;
+export default VeeButton;

@@ -1,12 +1,59 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '@/styles/_var.scss';
+import './index.scss';
 
-import Button from '@/packages/Button/button';
+import VeeButton from '@/packages/Button';
 
 const App = () => {
     return (
-        <Button></Button>
+      <div className="vee-app">
+          <ul>
+            <li>
+              <h3>按钮</h3>
+              <span className="vee-break"></span>
+              <VeeButton>默认按钮</VeeButton>&nbsp;
+              <VeeButton type="primary">普通按钮</VeeButton>&nbsp;
+              <VeeButton type="warning">警告按钮</VeeButton>&nbsp;
+              <VeeButton type="danger">危险按钮</VeeButton>&nbsp;
+              <VeeButton type="info">提示按钮</VeeButton>&nbsp;
+              <VeeButton type="success">成功按钮</VeeButton>&nbsp;
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+          </ul>
+      </div>
+      
     );
 };
 
