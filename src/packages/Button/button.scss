@@ -66,13 +66,13 @@ $active-color: #3a8ee6;
     }
 
     &-left {
-        svg {order:1}
+        i {order:1}
         span {order:2}
     }
 
     &-right {
         span {order:1}
-        svg {order:2}
+        i {order:2}
         .icon + span {
             margin-left: 0;
             margin-right: 4px;
