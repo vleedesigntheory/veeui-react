@@ -4,7 +4,6 @@ import './icon.scss';
 
 const VeeIcon = (props) => {
   const { icon } = props;
-  console.log(props);
   return (
     <i className={`iconfont icon${icon}`}></i>
   );

@@ -3,7 +3,6 @@ import './button.scss';
 import { VeeIcon } from '../Icon';
 
 const VeeButton = (props) => {
-  console.log(props);
   const { children, type, icon, loading, onClick } = props;
   const iconPosition = props['icon-position'];
   
