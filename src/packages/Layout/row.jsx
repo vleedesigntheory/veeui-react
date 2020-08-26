@@ -3,16 +3,17 @@ import './row.scss';
 
 const VeeRow = (props) => {
   const { children } = props;
-
   const rowStyle = (props) => {
-    const { gutter, justify } = props;
+    let { gutter, justify } = props;
+    gutter = gutter || 0;
     let styles = {};
     if(gutter) {
         styles = {
             ...styles,
             marginLeft: - gutter / 2 + 'px',
             marginRight: - gutter / 2 + 'px'
-        }
+        };
+        
     }
     if(justify) {
         let key = ['start', 'end'].includes(justify) ? `flex-${justify}` : justify;

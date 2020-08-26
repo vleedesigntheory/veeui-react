@@ -4,7 +4,8 @@ import './col.scss';
 const VeeCol = (props) => {
   const { children } = props;
   const colClass = (props) => {
-    const { span, offset } = props;
+    let { span, offset } = props;
+    span = span || 24
     let classes = [];
     if(span) {
         classes.push(`vee-col-${span}`);
@@ -31,11 +32,12 @@ const VeeCol = (props) => {
             }
         }
     })
-    return classes;
+    return classes.join(' ');
   };
 
   const colStyle = (props) => {
-    const { gutter } = props;
+    let { gutter } = props;
+    gutter = gutter || 0;
     let styles = {};
     if(gutter) {
         styles = {
