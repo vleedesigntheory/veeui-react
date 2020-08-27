@@ -2,10 +2,12 @@ import React from 'react';
 import './col.scss';
 
 const VeeCol = (props) => {
-  const { children } = props;
-  const colClass = (props) => {
-    let { span, offset } = props;
-    span = span || 24
+  let { children, span, offset, gutter } = props;
+
+  gutter = gutter || 0;
+  span = span || 24
+
+  const colClass = () => {
     let classes = [];
     if(span) {
         classes.push(`vee-col-${span}`);
@@ -35,9 +37,7 @@ const VeeCol = (props) => {
     return classes.join(' ');
   };
 
-  const colStyle = (props) => {
-    let { gutter } = props;
-    gutter = gutter || 0;
+  const colStyle = () => {
     let styles = {};
     if(gutter) {
         styles = {
@@ -50,7 +50,7 @@ const VeeCol = (props) => {
   }
   
   return (
-    <div className={colClass(props)} style={colStyle(props)}>
+    <div className={colClass()} style={colStyle()}>
         {children}
     </div>
   );

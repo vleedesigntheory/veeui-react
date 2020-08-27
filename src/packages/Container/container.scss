@@ -1,0 +1,8 @@
+.vee-container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+.vee-container.isVertical {
+    flex-direction: column;
+}

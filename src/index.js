@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 
-import { VeeButton, VeeButtonGroup, VeeIcon, VeeRow, VeeCol } from '@/packages';
+import { VeeButton, VeeButtonGroup, VeeIcon, VeeRow, VeeCol, VeeContainer, VeeHeader, VeeAside, VeeMain, VeeFooter } from '@/packages';
 
 const fn = (e) => {
   console.log(e)
@@ -110,7 +110,59 @@ const App = () => {
               </VeeRow>
             </li>
             <li>
-
+            <h3>容器</h3>
+            <span className="vee-break"></span>
+            <VeeContainer>
+              <VeeHeader className="vee-container-dark">Header</VeeHeader>
+              <VeeMain className="vee-container-medium">Main</VeeMain>
+            </VeeContainer>
+            <span className="vee-break"></span>
+            <VeeContainer>
+              <VeeHeader className="vee-container-dark">Header</VeeHeader>
+              <VeeMain className="vee-container-medium">Main</VeeMain>
+              <VeeFooter className="vee-container-dark">Footer</VeeFooter>
+            </VeeContainer>
+            <span className="vee-break"></span>
+            <VeeContainer>
+              <VeeAside className="vee-container-light" width="200px">Aside</VeeAside>
+              <VeeMain className="vee-container-medium">Main</VeeMain>
+            </VeeContainer>
+            <span className="vee-break"></span>
+            <VeeContainer>
+              <VeeHeader className="vee-container-dark">Header</VeeHeader>
+              <VeeContainer>
+                <VeeAside className="vee-container-light" width="200px">Aside</VeeAside>
+                <VeeMain className="vee-container-medium">Main</VeeMain>
+              </VeeContainer>
+            </VeeContainer>
+            <span className="vee-break"></span>
+            <VeeContainer>
+              <VeeHeader className="vee-container-dark">Header</VeeHeader>
+              <VeeContainer>
+                <VeeAside className="vee-container-light" width="200px">Aside</VeeAside>
+                <VeeContainer>
+                  <VeeMain className="vee-container-medium">Main</VeeMain>
+                  <VeeFooter className="vee-container-dark">Footer</VeeFooter>
+                </VeeContainer>
+              </VeeContainer>
+            </VeeContainer>
+            <span className="vee-break"></span>
+            <VeeContainer>
+              <VeeAside className="vee-container-light" width="200px">Aside</VeeAside>
+              <VeeContainer>
+                <VeeHeader className="vee-container-dark">Header</VeeHeader>
+                <VeeMain className="vee-container-medium">Main</VeeMain>
+              </VeeContainer>
+            </VeeContainer>
+            <span className="vee-break"></span>
+            <VeeContainer>
+              <VeeAside className="vee-container-light" width="200px">Aside</VeeAside>
+              <VeeContainer>
+                <VeeHeader className="vee-container-dark">Header</VeeHeader>
+                <VeeMain className="vee-container-medium">Main</VeeMain>
+                <VeeFooter className="vee-container-dark">Footer</VeeFooter>
+              </VeeContainer>
+            </VeeContainer>
             </li>
             <li>
 

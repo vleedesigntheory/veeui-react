@@ -2,10 +2,11 @@ import React from 'react';
 import './row.scss';
 
 const VeeRow = (props) => {
-  const { children } = props;
-  const rowStyle = (props) => {
-    let { gutter, justify } = props;
-    gutter = gutter || 0;
+  let { children, gutter, justify } = props;
+
+  gutter = gutter || 0;
+
+  const rowStyle = () => {
     let styles = {};
     if(gutter) {
         styles = {
@@ -26,7 +27,7 @@ const VeeRow = (props) => {
   }
 
   return (
-    <div className="vee-row" style={rowStyle(props)}>
+    <div className="vee-row" style={rowStyle()}>
         {children}
     </div>
   );
