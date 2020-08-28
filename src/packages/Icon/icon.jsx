@@ -3,9 +3,22 @@ import "@/styles/icon.css";
 import './icon.scss';
 
 const VeeIcon = (props) => {
-  const { icon } = props;
+  const { className, icon } = props;
+
+  const iconClass = () => {
+    let classes = [];
+    classes.push(`vee-icon iconfont`);
+    if(className) {
+      classes.push(className);
+    };
+    if(icon) {
+      classes.push(`icon${icon}`);
+    }
+    return classes.join(' ');
+  }
+
   return (
-    <i className={`iconfont icon${icon}`}></i>
+    <i className={iconClass()}></i>
   );
 }
 

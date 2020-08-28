@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 
-import { VeeButton, VeeButtonGroup, VeeIcon, VeeRow, VeeCol, VeeContainer, VeeHeader, VeeAside, VeeMain, VeeFooter } from '@/packages';
+import { VeeButton, VeeButtonGroup, VeeIcon, VeeRow, VeeCol, VeeContainer, VeeHeader, VeeAside, VeeMain, VeeFooter, VeeInput } from '@/packages';
 
 const fn = (e) => {
   console.log(e)
@@ -110,62 +110,71 @@ const App = () => {
               </VeeRow>
             </li>
             <li>
-            <h3>容器</h3>
-            <span className="vee-break"></span>
-            <VeeContainer>
-              <VeeHeader className="vee-container-dark">Header</VeeHeader>
-              <VeeMain className="vee-container-medium">Main</VeeMain>
-            </VeeContainer>
-            <span className="vee-break"></span>
-            <VeeContainer>
-              <VeeHeader className="vee-container-dark">Header</VeeHeader>
-              <VeeMain className="vee-container-medium">Main</VeeMain>
-              <VeeFooter className="vee-container-dark">Footer</VeeFooter>
-            </VeeContainer>
-            <span className="vee-break"></span>
-            <VeeContainer>
-              <VeeAside className="vee-container-light" width="200px">Aside</VeeAside>
-              <VeeMain className="vee-container-medium">Main</VeeMain>
-            </VeeContainer>
-            <span className="vee-break"></span>
-            <VeeContainer>
-              <VeeHeader className="vee-container-dark">Header</VeeHeader>
-              <VeeContainer>
-                <VeeAside className="vee-container-light" width="200px">Aside</VeeAside>
-                <VeeMain className="vee-container-medium">Main</VeeMain>
-              </VeeContainer>
-            </VeeContainer>
-            <span className="vee-break"></span>
-            <VeeContainer>
-              <VeeHeader className="vee-container-dark">Header</VeeHeader>
-              <VeeContainer>
-                <VeeAside className="vee-container-light" width="200px">Aside</VeeAside>
-                <VeeContainer>
-                  <VeeMain className="vee-container-medium">Main</VeeMain>
-                  <VeeFooter className="vee-container-dark">Footer</VeeFooter>
-                </VeeContainer>
-              </VeeContainer>
-            </VeeContainer>
-            <span className="vee-break"></span>
-            <VeeContainer>
-              <VeeAside className="vee-container-light" width="200px">Aside</VeeAside>
+              <h3>容器</h3>
+              <span className="vee-break"></span>
               <VeeContainer>
                 <VeeHeader className="vee-container-dark">Header</VeeHeader>
                 <VeeMain className="vee-container-medium">Main</VeeMain>
               </VeeContainer>
-            </VeeContainer>
-            <span className="vee-break"></span>
-            <VeeContainer>
-              <VeeAside className="vee-container-light" width="200px">Aside</VeeAside>
+              <span className="vee-break"></span>
               <VeeContainer>
                 <VeeHeader className="vee-container-dark">Header</VeeHeader>
                 <VeeMain className="vee-container-medium">Main</VeeMain>
                 <VeeFooter className="vee-container-dark">Footer</VeeFooter>
               </VeeContainer>
-            </VeeContainer>
+              <span className="vee-break"></span>
+              <VeeContainer>
+                <VeeAside className="vee-container-light" width="200px">Aside</VeeAside>
+                <VeeMain className="vee-container-medium">Main</VeeMain>
+              </VeeContainer>
+              <span className="vee-break"></span>
+              <VeeContainer>
+                <VeeHeader className="vee-container-dark">Header</VeeHeader>
+                <VeeContainer>
+                  <VeeAside className="vee-container-light" width="200px">Aside</VeeAside>
+                  <VeeMain className="vee-container-medium">Main</VeeMain>
+                </VeeContainer>
+              </VeeContainer>
+              <span className="vee-break"></span>
+              <VeeContainer>
+                <VeeHeader className="vee-container-dark">Header</VeeHeader>
+                <VeeContainer>
+                  <VeeAside className="vee-container-light" width="200px">Aside</VeeAside>
+                  <VeeContainer>
+                    <VeeMain className="vee-container-medium">Main</VeeMain>
+                    <VeeFooter className="vee-container-dark">Footer</VeeFooter>
+                  </VeeContainer>
+                </VeeContainer>
+              </VeeContainer>
+              <span className="vee-break"></span>
+              <VeeContainer>
+                <VeeAside className="vee-container-light" width="200px">Aside</VeeAside>
+                <VeeContainer>
+                  <VeeHeader className="vee-container-dark">Header</VeeHeader>
+                  <VeeMain className="vee-container-medium">Main</VeeMain>
+                </VeeContainer>
+              </VeeContainer>
+              <span className="vee-break"></span>
+              <VeeContainer>
+                <VeeAside className="vee-container-light" width="200px">Aside</VeeAside>
+                <VeeContainer>
+                  <VeeHeader className="vee-container-dark">Header</VeeHeader>
+                  <VeeMain className="vee-container-medium">Main</VeeMain>
+                  <VeeFooter className="vee-container-dark">Footer</VeeFooter>
+                </VeeContainer>
+              </VeeContainer>
             </li>
             <li>
-
+              <h3>输入框</h3>
+              <span className="vee-break"></span>
+              <VeeInput v-model="value" type="text" placeholder="请输入内容" name="username"></VeeInput>&nbsp;
+              <VeeInput v-model="value" type="password" placeholder="请输入内容" name="userpassword"></VeeInput>&nbsp;
+              <VeeInput v-model="value" disabled type="text" placeholder="请输入内容" name="username"></VeeInput>&nbsp;
+              <VeeInput v-model="value" clearable type="text" placeholder="请输入内容" name="username"></VeeInput>&nbsp;
+              <VeeInput v-model="value" show-password type="password" placeholder="请输入内容" name="userpassword"></VeeInput>
+              <span className="vee-break"></span>
+              <VeeInput v-model="value" prefix-icon="time" type="password" placeholder="请输入内容" name="userpassword"></VeeInput>&nbsp;
+              <VeeInput v-model="value" suffix-icon="time" type="password" placeholder="请输入内容" name="userpassword"></VeeInput>&nbsp;
             </li>
             <li>
 
