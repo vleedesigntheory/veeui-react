@@ -3,6 +3,8 @@ import { VeeIcon } from './Icon';
 import { VeeRow, VeeCol } from './Layout';
 import { VeeContainer, VeeHeader, VeeAside, VeeMain, VeeFooter } from './Container';
 import { VeeInput } from './Input';
+import { VeeUpload, VeeUploadDragger } from './Upload';
+import { VeeProgress } from './Progress';
 
 export {
     VeeButton,
@@ -15,5 +17,8 @@ export {
     VeeAside,
     VeeMain,
     VeeFooter,
-    VeeInput
+    VeeInput,
+    VeeUpload,
+    VeeUploadDragger,
+    VeeProgress
 }

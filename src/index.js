@@ -2,11 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 
-import { VeeButton, VeeButtonGroup, VeeIcon, VeeRow, VeeCol, VeeContainer, VeeHeader, VeeAside, VeeMain, VeeFooter, VeeInput } from '@/packages';
+import { VeeButton, VeeButtonGroup, VeeIcon, VeeRow, VeeCol, VeeContainer, VeeHeader, VeeAside, VeeMain, VeeFooter, VeeInput, VeeUpload } from '@/packages';
 
 const fn = (e) => {
   console.log(e)
 }
+
+const fileList = [
+  {
+    url: 'xxx',
+    name: 'aaa'
+  },
+  {
+    url: 'xxx',
+    name: 'bbb'
+  },
+]
 
 const App = () => {
     return (
@@ -177,7 +188,33 @@ const App = () => {
               <VeeInput v-model="value" suffix-icon="time" type="password" placeholder="请输入内容" name="userpassword"></VeeInput>&nbsp;
             </li>
             <li>
-
+              <h3>文件上传</h3>
+              <span className="vee-break"></span>
+              <p className="vee-note">
+                name 输入框提交到后台的字段名字<br/>
+                action 提交到后端的路径<br/>
+                limit 限制提交个数<br/>
+                on-exceed 用来如果超出限制后方法<br/>
+                on-change 上传文件发生变化后执行方法<br/>
+                on-success 上传成功时候会触发<br/>
+                on-error 上传失败时候会触发<br/>
+                fileList 显示已经上传过的文件<br/>
+              </p>
+              <span className="vee-break"></span>
+              <VeeUpload
+                name="avatar"
+                action="http://localhost:3000/upload"
+                file-list={fileList}
+                limit="3"
+                accept="image/jpeg"
+                multiple
+                drag
+              >
+                <VeeButton type="primary" icon="upload1">上传文件</VeeButton>
+                <div slot="tip">
+                  只能上传jpg/png文件，且不超过500kb
+                </div>
+              </VeeUpload>
             </li>
             <li>
 

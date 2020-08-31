@@ -1,0 +1,18 @@
+.vee-progress {
+    &-bar {
+        .outer {
+            border-radius: 100px;
+            background: #eee;
+            position: relative;
+            vertical-align: middle;
+
+            .inner {
+                transition: width .6s ease;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+            }
+        };   
+    }
+}
