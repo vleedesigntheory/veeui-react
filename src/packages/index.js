@@ -5,6 +5,7 @@ import { VeeContainer, VeeHeader, VeeAside, VeeMain, VeeFooter } from './Contain
 import { VeeInput } from './Input';
 import { VeeUpload, VeeUploadDragger } from './Upload';
 import { VeeProgress } from './Progress';
+import { VeeDatePicker, VeeDateRangePicker } from './DatePicker';
 
 export {
     VeeButton,
@@ -20,5 +21,7 @@ export {
     VeeInput,
     VeeUpload,
     VeeUploadDragger,
-    VeeProgress
+    VeeProgress,
+    VeeDatePicker,
+    VeeDateRangePicker
 }

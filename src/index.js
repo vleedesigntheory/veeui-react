@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 
-import { VeeButton, VeeButtonGroup, VeeIcon, VeeRow, VeeCol, VeeContainer, VeeHeader, VeeAside, VeeMain, VeeFooter, VeeInput, VeeUpload } from '@/packages';
+import { VeeButton, VeeButtonGroup, VeeIcon, VeeRow, VeeCol, VeeContainer, VeeHeader, VeeAside, VeeMain, VeeFooter, VeeInput, VeeUpload, VeeDatePicker, VeeDateRangePicker } from '@/packages';
 
 const fn = (e) => {
   console.log(e)
 }
 
-const fileList = [
+let fileList = [
   {
     url: 'xxx',
     name: 'aaa'
@@ -17,7 +17,9 @@ const fileList = [
     url: 'xxx',
     name: 'bbb'
   },
-]
+],
+date = '',
+dateRange = [];
 
 const App = () => {
     return (
@@ -217,7 +219,10 @@ const App = () => {
               </VeeUpload>
             </li>
             <li>
-
+              <h3>日历</h3>
+              <span className="vee-break"></span>
+              {date}<VeeDatePicker v-model="date" date={date}></VeeDatePicker>&nbsp;
+              {dateRange}<VeeDateRangePicker v-model="dateRange"></VeeDateRangePicker>
             </li>
             <li>
 
