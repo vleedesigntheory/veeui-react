@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import './col.scss';
 
-const VeeCol = (props) => {
-  let { children, span, offset, gutter } = props;
+import VeeRowContext  from './RowContext.jsx';
 
-  gutter = gutter || 0;
+const VeeCol = (props) => {
+  let { children, span, offset } = props;
+
   span = span || 24
 
   const colClass = () => {
@@ -36,23 +37,18 @@ const VeeCol = (props) => {
     })
     return classes.join(' ');
   };
-
-  const colStyle = () => {
-    let styles = {};
-    if(gutter) {
-        styles = {
-            ...styles,
-            paddingLeft: gutter / 2 + 'px',
-            paddingRight: gutter /2 + 'px'
-        }
-    }
-    return styles;
-  }
   
   return (
-    <div className={colClass()} style={colStyle()}>
-        {children}
-    </div>
+    <VeeRowContext.Consumer>
+        {
+            value => (
+                <div className={colClass()} style={{paddingLeft: value.gutter / 2 + 'px', paddingRight: value.gutter / 2 + 'px'}}>
+                    {children} 
+                </div>
+            )
+        }
+        
+    </VeeRowContext.Consumer>
   );
 }
 

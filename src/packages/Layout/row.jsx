@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './row.scss';
+import VeeRowContext  from './RowContext.jsx';
 
 const VeeRow = (props) => {
   let { children, gutter, justify } = props;
 
   gutter = gutter || 0;
-
+  
   const rowStyle = () => {
     let styles = {};
     if(gutter) {
@@ -14,7 +15,6 @@ const VeeRow = (props) => {
             marginLeft: - gutter / 2 + 'px',
             marginRight: - gutter / 2 + 'px'
         };
-        
     }
     if(justify) {
         let key = ['start', 'end'].includes(justify) ? `flex-${justify}` : justify;
@@ -25,10 +25,18 @@ const VeeRow = (props) => {
     }
     return styles;
   }
+  useEffect(() => {
+    console.log('1')
+  console.log('row gutter', gutter);
+  console.log('2')
+  })
+  
 
   return (
     <div className="vee-row" style={rowStyle()}>
-        {children}
+        <VeeRowContext.Provider value={{gutter}}>
+          {children}
+        </VeeRowContext.Provider>
     </div>
   );
 }
