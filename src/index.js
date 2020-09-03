@@ -19,7 +19,8 @@ let fileList = [
   },
 ],
 date = '',
-dateRange = [];
+dateRange = [],
+count = 10;
 
 const App = () => {
     return (
@@ -225,7 +226,31 @@ const App = () => {
               {dateRange}<VeeDateRangePicker v-model="dateRange"></VeeDateRangePicker>
             </li>
             <li>
-
+              <h3>无限滚动</h3>
+              <span className="vee-break"></span>
+              <div >
+                <div>
+                  <ul 
+                    style={{overflowY: 'scroll'}}
+                    className="vee-infinite-box" 
+                    v-infinite-scroll="load"
+                    infinite-scroll-disabled="disabled"
+                    infinite-scroll-delay="delay"
+                    infinite-scroll-distance="distance"
+                    infinite-scroll-immediate="immediate"
+                  >
+                    {
+                      (() => {
+                        let arr = [];
+                        for(let c=0; c< count; c++) {
+                          arr.push(<li key={c}>{c}</li>)
+                        }
+                        return arr;
+                      })()
+                    }     
+                  </ul>
+                </div>
+              </div>
             </li>
             <li>
 

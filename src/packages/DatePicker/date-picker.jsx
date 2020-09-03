@@ -13,7 +13,7 @@ const VeeDatePicker = (props) => {
 
   const [year, month, day] = getYearMonthDay(date);
   
-  let [isVisible, setVisible] = useState(true);
+  let [isVisible, setVisible] = useState(false);
   let [mode, setMode] = useState('date');
   let [time, setTime] = useState({ // 显示的时间
     year,
