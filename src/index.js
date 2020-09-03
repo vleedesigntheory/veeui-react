@@ -2,10 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 
-import { VeeButton, VeeButtonGroup, VeeIcon, VeeRow, VeeCol, VeeContainer, VeeHeader, VeeAside, VeeMain, VeeFooter, VeeInput, VeeUpload, VeeDatePicker, VeeDateRangePicker, VeePopover } from '@/packages';
+import { VeeButton, VeeButtonGroup, VeeIcon, VeeRow, VeeCol, VeeContainer, VeeHeader, VeeAside, VeeMain, VeeFooter, VeeInput, VeeUpload, VeeDatePicker, VeeDateRangePicker, VeePopover, VeeCarousel, VeeCarouselItem } from '@/packages';
 
 const fn = (e) => {
   console.log(e)
+}
+
+const change = (index) => {
+      
 }
 
 let fileList = [
@@ -267,7 +271,26 @@ const App = () => {
               </VeePopover>
             </li>
             <li>
-
+              <h3>轮播图</h3>
+              <span className="vee-break"></span>
+              <VeeCarousel
+                height="200px"
+                autoplay
+                delay="2000"
+                initial-index="0"
+                loop
+                onChange="change"
+              >
+                <VeeCarouselItem>
+                  <div>1</div>
+                </VeeCarouselItem>
+                <VeeCarouselItem>
+                  <div>2</div>
+                </VeeCarouselItem>
+                <VeeCarouselItem>
+                  <div>3</div>
+                </VeeCarouselItem>
+              </VeeCarousel>
             </li>
             <li>
 
