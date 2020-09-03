@@ -1,0 +1,89 @@
+@import '@/styles/_var.scss';
+
+.vee-popover {
+    display: inline-block;
+    position: relative;
+
+    &-content {
+        position: absolute;
+        padding: 10px;
+        border-radius: $border-radius;
+        left: 50%;
+        top: 50%;
+        z-index: 10;
+        box-shadow: -1px -1px 3px $color-light, 1px 1px 3px $color-light;
+        background-color: #fff;
+
+        &-top {
+            .arrow {
+                left: 50%;
+                margin-left: -6px;
+                bottom: 0;
+
+                &::after,
+                &::before {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        &-bottom {
+            .arrow {
+                left: 50%;
+                margin-left: -6px;
+                top: -12px;
+            }
+        }
+
+        &-left {
+            .arrow {
+                top: 50%;
+                margin-top: -6px;
+                right: 0;
+
+                &::after,
+                &::before {
+                    transform: rotate(90deg);
+                }
+            }
+
+            
+        }
+
+        &-right {
+            .arrow {
+                top: 50%;
+                margin-top: -6px;
+                left: -12px;
+            
+
+                &::after,
+                &::before {
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+        
+    }    
+}
+
+.arrow {
+        position: absolute;
+    }
+
+.arrow::before,
+.arrow::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-bottom-color: $color-light;
+    position: absolute;
+}
+
+.arrow::after {
+    border-bottom-color: #fff;
+    transform: translateY(1px);
+    filter: drop-shadow(0 -2px 1px $color-light)
+}

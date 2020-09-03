@@ -6,6 +6,7 @@ import { VeeInput } from './Input';
 import { VeeUpload, VeeUploadDragger } from './Upload';
 import { VeeProgress } from './Progress';
 import { VeeDatePicker, VeeDateRangePicker } from './DatePicker';
+import { VeePopover } from './Popover';
 
 export {
     VeeButton,
@@ -23,5 +24,6 @@ export {
     VeeUploadDragger,
     VeeProgress,
     VeeDatePicker,
-    VeeDateRangePicker
+    VeeDateRangePicker,
+    VeePopover
 }

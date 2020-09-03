@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 
-import { VeeButton, VeeButtonGroup, VeeIcon, VeeRow, VeeCol, VeeContainer, VeeHeader, VeeAside, VeeMain, VeeFooter, VeeInput, VeeUpload, VeeDatePicker, VeeDateRangePicker } from '@/packages';
+import { VeeButton, VeeButtonGroup, VeeIcon, VeeRow, VeeCol, VeeContainer, VeeHeader, VeeAside, VeeMain, VeeFooter, VeeInput, VeeUpload, VeeDatePicker, VeeDateRangePicker, VeePopover } from '@/packages';
 
 const fn = (e) => {
   console.log(e)
@@ -253,7 +253,18 @@ const App = () => {
               </div>
             </li>
             <li>
-
+              <h3>弹出框</h3>
+              <span className="vee-break"></span>
+              <VeePopover
+                v-model="show"
+                width="200px"
+                title="标题"
+                content="这是一个弹窗"
+                trigger="click"
+                placement="right"
+              >
+                <VeeButton type="primary" slot="reference">点我弹窗</VeeButton>
+              </VeePopover>
             </li>
             <li>
 
