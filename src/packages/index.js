@@ -8,6 +8,7 @@ import { VeeProgress } from './Progress';
 import { VeeDatePicker, VeeDateRangePicker } from './DatePicker';
 import { VeePopover } from './Popover';
 import { VeeCarousel, VeeCarouselItem } from './Carousel';
+import { VeePagination } from './Pagination';
 
 export {
     VeeButton,
@@ -28,5 +29,6 @@ export {
     VeeDateRangePicker,
     VeePopover,
     VeeCarousel,
-    VeeCarouselItem
+    VeeCarouselItem,
+    VeePagination
 }

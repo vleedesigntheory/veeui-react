@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 
-import { VeeButton, VeeButtonGroup, VeeIcon, VeeRow, VeeCol, VeeContainer, VeeHeader, VeeAside, VeeMain, VeeFooter, VeeInput, VeeUpload, VeeDatePicker, VeeDateRangePicker, VeePopover, VeeCarousel, VeeCarouselItem } from '@/packages';
+import { VeeButton, VeeButtonGroup, VeeIcon, VeeRow, VeeCol, VeeContainer, VeeHeader, VeeAside, VeeMain, VeeFooter, VeeInput, VeeUpload, VeeDatePicker, VeeDateRangePicker, VeePopover, VeeCarousel, VeeCarouselItem, VeePagination } from '@/packages';
 
 const fn = (e) => {
   console.log(e)
@@ -279,7 +279,7 @@ const App = () => {
                 delay="2000"
                 initial-index="0"
                 loop
-                onChange="change"
+                onChange={change}
               >
                 <VeeCarouselItem>
                   <div>1</div>
@@ -293,7 +293,13 @@ const App = () => {
               </VeeCarousel>
             </li>
             <li>
-
+              <h3>分页器</h3>
+              <span className="vee-break"></span>
+              <VeePagination
+                total="10"
+                pager-count="7"
+                current-page="currentPage"
+              ></VeePagination>
             </li>
             <li>
 
