@@ -1,0 +1,9 @@
+@import '@/styles/_var.scss';
+
+.vee-table {
+    table {
+        th,td {
+            border: 1px solid $color-light;
+        }
+    }
+}

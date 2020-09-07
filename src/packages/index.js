@@ -9,6 +9,7 @@ import { VeeDatePicker, VeeDateRangePicker } from './DatePicker';
 import { VeePopover } from './Popover';
 import { VeeCarousel, VeeCarouselItem } from './Carousel';
 import { VeePagination } from './Pagination';
+import { VeeTable } from './Table';
 
 export {
     VeeButton,
@@ -30,5 +31,6 @@ export {
     VeePopover,
     VeeCarousel,
     VeeCarouselItem,
-    VeePagination
+    VeePagination,
+    VeeTable
 }

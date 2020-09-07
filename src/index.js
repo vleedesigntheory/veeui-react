@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 
-import { VeeButton, VeeButtonGroup, VeeIcon, VeeRow, VeeCol, VeeContainer, VeeHeader, VeeAside, VeeMain, VeeFooter, VeeInput, VeeUpload, VeeDatePicker, VeeDateRangePicker, VeePopover, VeeCarousel, VeeCarouselItem, VeePagination } from '@/packages';
+import { VeeButton, VeeButtonGroup, VeeIcon, VeeRow, VeeCol, VeeContainer, VeeHeader, VeeAside, VeeMain, VeeFooter, VeeInput, VeeUpload, VeeDatePicker, VeeDateRangePicker, VeePopover, VeeCarousel, VeeCarouselItem, VeePagination, VeeTable } from '@/packages';
 
 const fn = (e) => {
   console.log(e)
@@ -10,6 +10,10 @@ const fn = (e) => {
 
 const change = (index) => {
       
+}
+
+const select = (selection, row) => {
+
 }
 
 let fileList = [
@@ -24,7 +28,43 @@ let fileList = [
 ],
 date = '',
 dateRange = [],
-count = 10;
+count = 10,
+columns = [
+  {
+    title: 'Name',
+    name: 'name'
+  },
+  {
+    title: 'Age',
+    name: 'age'
+  },
+  {
+    title: 'Address',
+    name: 'address'
+  }
+],
+data = [
+  {
+    name: 'aaa',
+    age: 17,
+    address: 'beijing'
+  },
+  {
+    name: 'bbb',
+    age: 18,
+    address: 'shanghai'
+  },
+  {
+    name: 'ccc',
+    age: 19,
+    address: 'guangzhou'
+  },
+  {
+    name: 'ddd',
+    age: 20,
+    address: 'shenzhen'
+  }
+];
 
 const App = () => {
     return (
@@ -302,7 +342,14 @@ const App = () => {
               ></VeePagination>
             </li>
             <li>
-
+              <h3>表格</h3>
+              <span className="vee-break"></span>
+              <VeeTable
+                columns={columns}
+                data={data}
+                onSelect={select}
+              >
+              </VeeTable>
             </li>
           </ul>
       </div>
