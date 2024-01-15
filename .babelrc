@@ -1,0 +1,14 @@
+{
+    "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react"
+    ],
+    "plugins": [
+        [
+            "@babel/plugin-transform-runtime",
+            {
+                "corejs": false // 解决 helper 函数重复引入
+            }
+        ]
+    ]
+}

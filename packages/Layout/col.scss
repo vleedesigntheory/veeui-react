@@ -1,0 +1,71 @@
+@import '../styles/_var.scss';
+
+@for $i from 1 through 24 {
+    .vee-col-#{$i} {
+        width: calc($i / 24) * 100%;
+    }
+
+    .vee-col-offset-#{$i} {
+        margin-left: calc($i / 24) * 100%;
+    }
+}
+
+@include res(xs) {
+    @for $i from 1 through 24 {
+        .vee-col-xs-#{$i} {
+            width: calc($i / 24) * 100%;
+        }
+
+        .vee-col-offset-#{$i} {
+           margin-left: calc($i / 24) * 100%;
+        }
+    }
+}
+
+@include res(sm) {
+    @for $i from 1 through 24 {
+        .vee-col-xs-#{$i} {
+            width: calc($i / 24) * 100%;
+        }
+
+        .vee-col-offset-#{$i} {
+           margin-left: calc($i / 24) * 100%;
+        }
+    }
+}
+
+@include res(md) {
+    @for $i from 1 through 24 {
+        .vee-col-xs-#{$i} {
+            width: calc($i / 24) * 100%;
+        }
+
+        .vee-col-offset-#{$i} {
+           margin-left: calc($i / 24) * 100%;
+        }
+    }
+}
+
+@include res(lg) {
+    @for $i from 1 through 24 {
+        .vee-col-xs-#{$i} {
+            width: calc($i / 24) * 100%;
+        }
+
+        .vee-col-offset-#{$i} {
+           margin-left: calc($i / 24) * 100%;
+        }
+    }
+}
+
+@include res(xl) {
+    @for $i from 1 through 24 {
+        .vee-col-xs-#{$i} {
+            width: calc($i / 24) * 100%;
+        }
+
+        .vee-col-offset-#{$i} {
+           margin-left: calc($i / 24) * 100%;
+        }
+    }
+}
